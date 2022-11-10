@@ -11,7 +11,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 5vh;
+	gap: 2vh;
 }
 
 h1 {
@@ -20,6 +20,20 @@ h1 {
 	font-weight: 400;
 	font-family: cursive, arial;
 	color: black;
+}
+
+.button {
+	padding: 4px 8px;
+	background-color: rgb(144, 148, 152);
+	border: 3px solid rgb(57, 58, 60);
+	font-size: 24px;
+	font-family: monospace, serif;
+	display: inline-flex;
+}
+
+.button:hover {
+	background-color: hsla(212, 13%, 77%, 0.8);
+	color: rgba(42, 42, 42);
 }
 
 .container {
