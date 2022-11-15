@@ -28,11 +28,34 @@ function makeGrid(squaresPerRow) {
 		// row_divs.forEach(() => {
 		const square_divs = [...arguments];
 		const rowSelector = document.querySelector(`.row${y}`);
-		console.log(rowSelector);
 		for (let x = 1; x <= squaresPerRow; x++) {
 			square_divs[x] = document.createElement('div');
 			square_divs[x].classList.toggle('squares'); //".squares" class is prespecified in the CSS file.
 			rowSelector.appendChild(square_divs[x]);
 		}
 	}
+}
+
+makeGrid(24);
+setSquaresTime();
+
+// this function for each square's' mouse event "pointer go out from it" call timeout().
+function setSquaresTime() {
+	const allSquares = document.querySelectorAll('.squares');
+	allSquares.forEach((sqr) => {
+		sqr.onmouseout = function (event) {
+			let target = event.target;
+			timeout(target);
+		};
+	});
+}
+
+// time out function set the background for a square to black and after 5000 ms to white.
+function timeout(target) {
+	setTimeout(() => {
+		target.style.background = 'black';
+	}, 0);
+	timeId = setTimeout(() => {
+		target.style.background = 'white';
+	}, 5000);
 }
