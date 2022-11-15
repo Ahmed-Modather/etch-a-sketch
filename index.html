@@ -10,7 +10,20 @@
 	</head>
 	<body>
 		<h1>Etch A Sketch</h1>
-		<button class="button">setting the grid</button>
+		<button class="button" onclick="askUser()">setting the grid</button>
+		<!-- the HTML for poping up a modal when the user press the button "setting the grid" -->
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close-btn">&times</span>
+					<h2>Enter the number of squares per side for the new grid</h2>
+				</div>
+				<label for="input">Please, max number is 100:</label>
+				<input type="number" min="0" max="100" id="input" />
+				<button class="ok-btn">OK</button>
+			</div>
+		</div>
+
 		<div class="container"></div>
 	</body>
 </html>

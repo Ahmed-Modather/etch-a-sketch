@@ -58,3 +58,79 @@ h1 {
 .squares:hover {
 	background-color: black;
 }
+
+/* Below is the styles for poping up a modal when the user press the button "setting the grid"*/
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: lightsalmon;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 30px 50px;
+	border: 2px solid #888;
+	border-radius: 10px;
+	width: 80%; /* Could be more or less, depending on screen size */
+	font-family: cursive, arial;
+}
+
+/* The Close Button */
+.close-btn {
+	color: rgb(99, 94, 94);
+	float: right;
+	font-size: 48px;
+	font-weight: bold;
+	font-family: Arial;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+	color: rgb(211, 0, 0);
+	cursor: pointer;
+}
+
+/* Input and Label */
+input {
+	width: 20%;
+	height: 10%;
+	font-size: 36px;
+	font-family: arial;
+	margin: 20px 0;
+	border-radius: 5px;
+	background-color: azure;
+}
+
+label {
+	font-size: 24px;
+	font-family: cursive, arial;
+}
+
+/* The OK Button */
+.ok-btn {
+	display: block;
+	margin: auto;
+	padding: 10px 20px;
+	border-radius: 5px;
+	background-color: rgb(125, 109, 228);
+	color: azure;
+	font-size: 36px;
+	font-family: inherit;
+}
+
+.ok-btn:hover,
+.ok-btn:focus {
+	background-color: rgb(85, 72, 172);
+	text-decoration: none;
+	cursor: pointer;
+}
